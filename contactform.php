@@ -10,5 +10,6 @@ if (isset($_POST['submit'])) {
     $txt = "Masz nową wiadomość od " .$name ",z e-korepetycje\n\n".$message;
 
     mail($mailTo, $subject, $txt, $headers);
-    header("Location: index.php?mailsend");
+    header("Location: index.html");
 }
+?>
