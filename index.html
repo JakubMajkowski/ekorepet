@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Strona z ogłoszeniami korepetytorów.">
+  <meta name="keywords" content="korepetycje, nauka, ekorepetycje, korepetytor">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.6, user-scalable=no">
+  <meta name="author" content="Jakub Majkowski">
+
+  <title>e-Korepetycje</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="shortcut icon" href="hat.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="logo">
+      <i class="fas fa-graduation-cap"></i><a href="#">e-Korepetycje</a>
+    </div>
+
+    <ul class="nav-links">
+      <ul>
+        <li><a href="#">Główna</a></li>
+        <li><a href="#">Ogłoszenia</a></li>
+        <li><a href="#">Opinie</a></li>
+        <div class="popup">
+          <button onclick="document.getElementById('modal-wrapper').style.display='block'">Zaloguj</button>
+        </div>
+      </ul>
+    </ul>
+
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <div class="progress-wrapper">
+    <div class="progress-label"></div>
+    <progress></progress>
+  </div>
+
+  <!-- Login form -->
+  <div iv id="modal-wrapper" class="modal">
+
+  <form action="index.html" class="login-form">
+    <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+    <h5><i class="fas fa-sign-in-alt"></i> Login</h5>
+
+    <div class="txtb">
+      <input type="text" placeholder="E-mail">
+    </div>
+
+    <div class="txtb">
+      <input type="password" placeholder="Hasło">
+    </div>
+
+    <input type="submit" class="log-btn" value="Zaloguj">
+
+    <div class="bottom-text">
+      Nie masz konta? &nbsp;
+      <button onclick = "document.getElementById('modal-wrapper2').style.display='none'">Zarejestruj</button>
+    </div>
+  </form>
+
+  </div>
+
+  <!-- Register form -->
+  <div id="modal-wrapper2" class="register">
+
+    <form action="index.html" class="reg-form">
+      <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
+      <h5><i class="fas fa-sign-in-alt"></i> Zarejestruj</h5>
+
+      <div class="txtb">
+        <input type="text" placeholder="Nazwa użytkownika">
+      </div>
+
+      <div class="txtb">
+        <input type="text" placeholder="E-mail">
+      </div>
+
+      <div class="txtb">
+        <input type="password" name="Create" id="password2" placeholder="Hasło">
+        <i class="fas fa-eye btn-show-hide-pwd" data-for="password2"></i>
+      </div>
+
+      <div class="select-box">
+        <div class="options-container">
+        <div class="option">
+          <input type="radio" class="radio" id="voivo" name="category" placeholder="Województwo"/>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo1" name="category"/>
+          <label>dolnośląskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo2" name="category"/>
+          <label>kujawsko-pomorskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo3" name="category"/>
+          <label>lubelskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo4" name="category"/>
+          <label>lubuskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo5" name="category"/>
+          <label>łódzkie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo6" name="category"/>
+          <label>małopolskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo7" name="category"/>
+          <label>mazowieckie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo8" name="category"/>
+          <label>opolskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo9" name="category"/>
+          <label>podkarpackie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo10" name="category"/>
+          <label>podlaskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo11" name="category"/>
+          <label>pomorskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo12" name="category"/>
+          <label>śląskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo13" name="category"/>
+          <label>świętokrzyskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo14" name="category"/>
+          <label>warmińsko-mazurskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo15" name="category"/>
+          <label>wielkopolskie</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" class="radio" id="voivo16" name="category"/>
+          <label>zachodniopomorskie</label>
+        </div>
+      </div>
+
+      <div class="selected">
+        Województwo &nbsp;<i class="fas fa-angle-down"></i>
+      </div>
+    </div>
+    <div class="g-recaptcha" data-sitekey="6LfywtAUAAAAAGike0nXJCcJeCogYe5Xtazhwn36"></div>
+      <input type="submit" class="reg-btn" value="Zarejestruj">
+    </div>
+    </form>
+
+  </div>
+
+  <div class="parallax">
+    <h1>Załóż darmowe konto już dziś!</h1> <br>
+    <button class="reg-click" onclick="document.getElementById('modal-wrapper2').style.display='block'">Kliknij tu!</button>
+  </div>
+
+  <div class="search-form">
+    <form>
+        <div class="searching">
+            <i class="fas fa-search"></i>
+            <input id="Search" type="search" placeholder="Wyszukaj..." required>
+            <input id="SearchButton" type="button" value="Szukaj">
+        </div>
+    </form>
+</div>
+
+<div class="about"><i class="fas fa-bookmark"></i> Przedmioty</div>
+
+<div class="call-outs-container">
+    <div class="call-out">
+        <a href="#"><h2 id="matematyka"><i class="fas fa-square-root-alt"></i>Matematyka</h2></a>
+        <a href="#"><h2 id="biologia"><i class="fas fa-dna"></i>Biologia</h2></a>
+        <a href="#"><h2 id="chemia"><i class="fas fa-vial"></i>Chemia</h2></a>
+        <a href="#"><h2 id="fizyka"><i class="fas fa-atom"></i>Fizyka</h2></a>
+        <a href="#"><h2 id="informatyka"><i class="fas fa-microchip"></i>Informatyka</h2></a>
+        <a href="#"><h2 id="geografia"><i class="fas fa-globe-americas"></i>Geografia</h2></a>
+        <a href="#"><h2 id="ekonomia"><i class="fas fa-chart-line"></i>Ekonomia</h2></a>
+        <a href="#"><h2 id="programistyka"><i class="fas fa-code"></i>Programistyka</h2></a>
+    </div>
+
+    <div class="call-out">
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Polski</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Angielski</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Niemiecki</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Rosyjski</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Hiszpański</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Francuski</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Włoski</h2></a>
+        <a href="#"><h2><i class="fas fa-pen-fancy"></i>Japoński</h2></a>
+    </div>
+
+    <div class="call-out">
+        <a href="#"><h2><i class="fas fa-monument"></i>Historia</h2></a>
+        <a href="#"><h2><i class="fas fa-music"></i>Muzyka</h2></a>
+        <a href="#"><h2><i class="fas fa-palette"></i>Malarstwo</h2></a>
+        <a href="#"><h2><i class="fas fa-scroll"></i>WOS</h2></a>
+        <a href="#"><h2><i class="fas fa-landmark"></i>WOK</h2></a>
+        <a href="#"><h2><i class="fas fa-asterisk"></i>EDB</h2></a>
+        <a href="#"><h2><i class="fas fa-basketball-ball"></i>WF</h2></a>
+        <a href="#"><h2><i class="fas fa-shoe-prints"></i>Taniec</h2></a>
+    </div>
+
+    <div class="call-out">
+        <a href="#"><h2><i class="fas fa-balance-scale-right"></i>Prawo</h2></a>
+        <a href="#"><h2><i class="fas fa-car-crash"></i>Prawo jazdy</h2></a>
+        <a href="#"><h2><i class="fas fa-tools"></i>Robotyka</h2></a>
+        <a href="#"><h2><i class="fas fa-leaf"></i>Ekologia</h2></a>
+        <a href="#"><h2><i class="fas fa-umbrella-beach"></i>Turystyka</h2></a>
+        <a href="#"><h2><i class="fas fa-brain"></i>Psychologia</h2></a>
+        <a href="#"><h2><i class="fas fa-theater-masks"></i>Aktorstwo</h2></a>
+        <a href="#"><h2><i class="fas fa-utensils"></i>Kulinaria</h2></a>
+    </div>
+</div>
+
+
+  <br>
+
+  <div class="all">
+    <a href="#"> Wszystkie przedmioty <i class="fas fa-angle-right"></i> </a>
+  </div>
+
+  <br>
+
+  <div class="opinion"><i class="fas fa-map-marker-alt"></i> W twojej okolicy </div>
+
+  <br><br>
+
+  <div class="mapouter">
+    <div class="gmap_canvas">
+      <iframe width="100%" height="487" id="gmap_canvas" src="https://maps.google.com/maps?q=Gdansk&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <a href="https://123movies-en.org/en/"></a>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="announcements"><i class="fas fa-chalkboard"></i> Ogłoszenia wyróżnione </div>
+
+  <div class="grid-container">
+    <a href="#"><div class="grid-item1">Mariusz (Matematyka)</div></a>
+    <a href="#"><div class="grid-item2">Mariusz (Angielski)</div></a>
+    <a href="#"><div class="grid-item3">Mariusz (Informatyka)</div></a>
+  </div>
+
+  <br><br><br>
+
+  <div class="announcements"><i class="fas fa-chalkboard"></i> Formularz kontaktowy </div>
+  <div class="container">
+    <form action="contactform.php" method="post">
+  
+      <label for="fname">Imię</label>
+      <input type="text" id="fname" name="firstname" placeholder="">
+
+      <label for="lname">Adres email</label>
+      <input type="text" id="lname" name="email" placeholder="">
+  
+      <label for="subject">Wiadomość</label>
+      <textarea id="subject" name="subject" placeholder="Zacznij pisać" style="height:200px"></textarea>
+  
+      <input type="submit" name="submit" value="Wyślij">
+  
+    </form>
+  </div>
+  <br><br><br><br>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+  <footer>
+    <div class="foot">
+      Copyright © 2020-2024 Jakub Majkowski. Wszelkie prawa zastrzeżone.
+      <div class="foot-cont">
+        <a href="#"><h3><i class="fas fa-cookie-bite"></i> Polityka prywatności</h3></a>
+        <a href="#"><h3><i class="fas fa-scroll"></i>Regulamin</h3></a>
+        <a href="#"><h3><i class="fab fa-facebook"></i> Facebook</h3></a>
+        <a href="#"><h3><i class="fas fa-bullhorn"></i> Reklama</h3></a>
+      </div>   
+    </div> 
+  </footer>
+
+  <!-- Show password -->
+    <script>
+        const allBtnSHP = document.querySelectorAll(".btn-show-hide-pwd");
+
+        allBtnSHP.forEach((button) => {
+
+          const forElement = document.getElementById(button.dataset.for);
+
+          if(forElement && forElement instanceof HTMLInputElement) {
+              ["mousedown", "touchstart"].forEach((eventName) => {
+                button.addEventListener(eventName, () => {
+                  forElement.setAttribute("type", "text")
+                });
+              });
+    
+              ["mouseup", "mouseleave", "touchend", "touchcancel"].forEach((eventName) => {
+                button.addEventListener(eventName, (e) => {
+                  e.preventDefault();
+                  forElement.setAttribute("type", "password");
+                })
+              });
+          }
+        });
+    </script>
+
+    <script>
+      // If user clicks anywhere outside of the modal, Modal will close
+
+      var modal = document.getElementById('modal-wrapper');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+      }
+    </script>
+
+    <!---- Progress bar ---->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      // Progress bar
+
+      $(document).ready(function() {
+        const win = $(window);
+        const doc = $(document);
+        const progressBar = $('progress');
+        const setValue = () => win.scrollTop();
+        const setMax = () => doc.height() - win.height();
+        const setPercent = () => Math.round(win.scrollTop() / (doc.height() - win.height()) * 100);
+
+        progressBar.attr({ value: setValue(), max: setMax() });
+
+        doc.on('scroll', () => {
+          progressBar.attr({ value: setValue() });
+        });
+
+        });
+    </script>
+
+    <script>
+    document.getElementById('Search').addEventListener('input', function() {
+    let keyword = this.value.toLowerCase();
+    let subjects = document.querySelectorAll('.call-out a');
+
+    subjects.forEach(function(subject) {
+        let subjectText = subject.querySelector('h2').textContent.toLowerCase();
+        if (subjectText.includes(keyword)) {
+            subject.style.display = 'block';
+        } else {
+            subject.style.display = 'none';
+        }
+        });
+    });
+
+    </script>
+    <script src="script.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
